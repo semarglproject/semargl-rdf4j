@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.semarglproject</groupId>
         <artifactId>semargl-parent</artifactId>
-        <version>0.7.1-SNAPSHOT</version>
+        <version>0.8.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>semargl-rdf4j</artifactId>
@@ -75,22 +75,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.openrdf.sesame</groupId>
-            <artifactId>sesame-rio-compliance</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <!-- Exclude dependencies whose underlying library versions clash between Sesame and RDF4J -->
-                <exclusion>
-                    <groupId>org.openrdf.sesame</groupId>
-                    <artifactId>sesame-sail-lucene4</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.openrdf.sesame</groupId>
-                    <artifactId>sesame-rio-jsonld</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <scope>test</scope>
@@ -131,14 +115,4 @@
         </dependency>
 
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <!-- Manage MapDB version across Sesame and RDF4J -->
-            <dependency>
-                <groupId>org.mapdb</groupId>
-                <artifactId>mapdb</artifactId>
-                <version>1.0.8</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>
